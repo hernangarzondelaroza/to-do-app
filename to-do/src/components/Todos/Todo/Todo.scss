@@ -1,0 +1,35 @@
+.tasks-list {
+    margin: 0;
+    padding: 0;
+}
+
+.tasks-list li {
+    border-radius: 3px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #e4e4e4;
+    }
+}
+
+.task-description,
+.task-todo,
+.task-done {
+    font-weight: bold;
+}
+
+.task-todo {
+    color: #721c24;
+}
+
+.task-done {
+    color: #155724;
+}
+
+.edit-description {
+    font-size: 11px;
+}

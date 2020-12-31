@@ -1,0 +1,40 @@
+.users-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+        font-size: 20px;
+        list-style-type: none;
+        margin: 20px 0;
+    }
+}
+
+.user-name {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+    &::selection {
+        color: red;
+    }
+}
+
+.edit-name {
+    width: 100%;
+}
+
+.user-id,
+.element-id {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
