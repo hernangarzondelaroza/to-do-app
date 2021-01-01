@@ -5,6 +5,8 @@ import Alert from 'react-bootstrap/Alert';
 
 import UserTaskService from '../../../services/userTasks.service';
 
+import PropTypes from 'prop-types';
+
 const Todo = ({data, userList, userSelected, close}) => {
     const [tasks, setTasks] = useState([]);
     const [todosList, setTodosList] = useState(Object.entries(data));
@@ -54,5 +56,12 @@ const Todo = ({data, userList, userSelected, close}) => {
         </ul>
     );
 }
+
+Todo.propTypes = {
+    data: PropTypes.object,
+    userList: PropTypes.array,
+    userSelected: PropTypes.string,
+    close: PropTypes.func,
+};
 
 export default Todo;

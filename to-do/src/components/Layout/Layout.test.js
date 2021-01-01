@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import Layout from './Layout';
 
-describe('App', () => {
+describe('Layout', () => {
   it('Should take a snapshot', () => {
-    const component = render(<App />);
+    const component = render(<Layout />);
     expect(component).toMatchSnapshot();
   })
 })

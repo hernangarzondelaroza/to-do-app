@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import Header from './Header';
 
-describe('App', () => {
+describe('Header', () => {
   it('Should take a snapshot', () => {
-    const component = render(<App />);
+    const component = render(<Header />);
     expect(component).toMatchSnapshot();
   })
 })

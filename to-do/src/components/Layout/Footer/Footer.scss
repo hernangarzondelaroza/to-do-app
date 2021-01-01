@@ -1,0 +1,16 @@
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    height: 50px;
+}
+
+.footer code a {
+    display: block;
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

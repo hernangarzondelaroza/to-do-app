@@ -16,3 +16,4 @@ This proyect is a small TODO app for BunnyStudio.
 
 ### Tests
 - No testing yet. Expected to use Jest at least for snapshots.
+

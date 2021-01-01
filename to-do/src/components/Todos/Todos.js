@@ -9,7 +9,7 @@ import Todo from './Todo/Todo';
 import UserTasksService from '../../services/userTasks.service';
 import { v4 as uuidv4 } from 'uuid';
 
-import {useSelector} from 'react-redux';
+import PropTypes from 'prop-types';
 
 const Todos = ({show, close, userList, userSelected}) => {
     const [todos, setTodos] = useState([]);
@@ -21,7 +21,7 @@ const Todos = ({show, close, userList, userSelected}) => {
         UserTasksService.getTodos()
             .then(todos => {
                 setTodos(todos);
-            })
+            });
     }, [])
 
     const handleCreateTodos = () => setCreateTodos(true);
@@ -72,5 +72,13 @@ const Todos = ({show, close, userList, userSelected}) => {
         </Modal>
     );
 }
+
+Todos.propTypes = {
+    show: PropTypes.bool,
+    close: PropTypes.func,
+    userList: PropTypes.array,
+    userSelected: PropTypes.string
+};
+
 
 export default Todos;

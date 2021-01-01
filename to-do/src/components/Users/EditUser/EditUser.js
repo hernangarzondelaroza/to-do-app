@@ -5,6 +5,8 @@ import Modal from 'react-bootstrap/Modal';
 
 import UsersService from '../../../services/users.service';
 
+import PropTypes from 'prop-types';
+
 const EditUser = ({show, hide, userInEdition, elementInEdition}) => {
     const [userEditValue, setUserEditValue] = useState('');
 
@@ -45,5 +47,12 @@ const EditUser = ({show, hide, userInEdition, elementInEdition}) => {
         </Modal>
     );
 }
+
+EditUser.propTypes = {
+    show: PropTypes.bool,
+    hide: PropTypes.func,
+    userInEdition: PropTypes.string,
+    elementInEdition: PropTypes.string
+};
 
 export default EditUser;

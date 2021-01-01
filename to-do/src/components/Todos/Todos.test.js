@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import Todos from './Todos';
 
-describe('App', () => {
+describe('Todos', () => {
   it('Should take a snapshot', () => {
-    const component = render(<App />);
+    const component = render(<Todos />);
     expect(component).toMatchSnapshot();
   })
 })

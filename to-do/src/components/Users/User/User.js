@@ -8,6 +8,8 @@ import EditUsers from '../EditUser/EditUser';
 import Button from 'react-bootstrap/Button';
 import UsersService from '../../../services/users.service';
 
+import PropTypes from 'prop-types';
+
 const User = (props) => {
     const [showTodos, setShowTodos] = useState(false);
     const [userSelected, setUserSelected] = useState('');
@@ -17,7 +19,6 @@ const User = (props) => {
     const [userInEdition, setUserInEdition] = useState('');
     const [elementInEdition, setElementInEdition] = useState('');
 
-    // const usersData = Object.entries(props.data);
     const userList = usersData.map(r => r[1].name);
 
     // Todos Handlers
@@ -93,5 +94,9 @@ const User = (props) => {
         </>
     );
 }
+
+User.propTypes = {
+    data: PropTypes.object
+};
 
 export default User;
